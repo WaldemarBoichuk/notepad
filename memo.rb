@@ -11,7 +11,7 @@ class Memo < Post
     @text.pop
   end
 
-  def to_strings
+  def to_string
     time_string = "New File: #{@created_at.strftime("%Y,%m,%d, %H: %M: %S")} \n\r \n\r"
     return @text.unshift(time_string)
   end

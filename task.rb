@@ -1,6 +1,6 @@
 require 'date'
 
-class Tast < Post
+class Task < Post
   def initialize
     super
     @due_date = Time.now
@@ -12,10 +12,10 @@ class Tast < Post
 
     puts "When do you want do that? Enter the date in format DD.mm.yyyy"
     input = STDIN.gets.chomp
-@due_date = Date.parse(input)
+    @due_date = Date.parse(input)
     end
 
-    def to_strings
+    def to_string
       time_string = "New File: #{@created_at.strftime("%Y,%m,%d, %H: %M: %S")} \n\r \n\r"
       deadline = "The deadline: #{@due_date}"
       return [deadline,@text,time_string]
